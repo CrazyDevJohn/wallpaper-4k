@@ -12,7 +12,7 @@ import {
   Platform,
   StatusBar,
 } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { MaterialIcons, Ionicons } from "@expo/vector-icons";
 import { BlurView } from "expo-blur";
 import { getItemById, urlFor } from "../../sanity";
 
@@ -105,10 +105,10 @@ const Item = ({ route, navigation }) => {
                   </Text>
                 </View>
                 <TouchableOpacity onPress={handleDownload}>
-                  <Ionicons
-                    name="md-cloud-download-sharp"
+                  <MaterialIcons
+                    name="cloud-download"
                     size={24}
-                    color={"white"}
+                    color="white"
                   />
                 </TouchableOpacity>
               </BlurView>
