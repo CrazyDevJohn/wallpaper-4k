@@ -92,7 +92,7 @@ const Item = ({ route, navigation }) => {
             </View>
             <View className="absolute inset-x-0 p-4 bottom-[20px]">
               <BlurView
-                intensity={70}
+                intensity={100}
                 tint="dark"
                 className="p-4 flex-row items-center justify-between"
               >

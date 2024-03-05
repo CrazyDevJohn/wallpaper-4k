@@ -29,7 +29,10 @@ const Upload = ({ navigation }) => {
   const [isPostUploading, setIsPostUploading] = React.useState(false);
 
   React.useEffect(() => {
-    pickImage();
+    setIsPostUploading(true);
+    setTimeout(() => {
+      pickImage();
+    }, 1000);
   }, []);
 
   const pickImage = async () => {
@@ -39,6 +42,7 @@ const Upload = ({ navigation }) => {
     });
 
     if (!result.canceled) {
+      setIsPostUploading(false);
       setIsImageUploading(true);
       const img = await fetch(result.assets[0].uri);
       const blob = await img.blob();
