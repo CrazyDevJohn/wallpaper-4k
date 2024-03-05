@@ -98,6 +98,7 @@ const ItemsScreen = ({ route, navigation }) => {
           onPress={() => {
             navigation.goBack();
           }}
+          activeOpacity={0.89}
           className="p-4 w-[60px]"
         >
           <Ionicons name="arrow-back" size={24} color="white" />
@@ -157,6 +158,7 @@ const ItemsScreen = ({ route, navigation }) => {
               <TouchableOpacity
                 style={{ flex: 1 }}
                 onPress={() => navigation.navigate("Item", { _id: item?._id })}
+                activeOpacity={0.89}
               >
                 <Image
                   source={{ uri: urlFor(item?.image).url() }}
